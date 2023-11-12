@@ -61,10 +61,13 @@
 
         function iniciarContador(numeroMesa) {
             let tiempoTranscurrido = 0;
-            clearInterval(intervalosContador[numeroMesa]); // Detener el contador anterior, si existe
+            clearInterval(intervalosContador[numeroMesa]);
             intervalosContador[numeroMesa] = setInterval(function() {
+                const horas = Math.floor(tiempoTranscurrido / 3600); // 3600 segundos en una hora
+                const minutos = Math.floor((tiempoTranscurrido % 3600) / 60);
+                const segundos = tiempoTranscurrido % 60;
+                document.getElementById('contador-mesa' + numeroMesa).textContent = `Tiempo: ${horas}:${minutos}:${segundos}`;
                 tiempoTranscurrido++;
-                document.getElementById('contador-mesa' + numeroMesa).textContent = 'Tiempo: ' + tiempoTranscurrido + 's';
             }, 1000);
         }
 

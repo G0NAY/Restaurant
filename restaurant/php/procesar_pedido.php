@@ -84,5 +84,3 @@ if ($response === false) {
 } else {
     echo 'Respuesta de la API: ' . $response;
 }
-
-curl_clo

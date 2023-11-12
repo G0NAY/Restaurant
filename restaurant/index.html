@@ -1,0 +1,47 @@
+<script>
+    // Código JavaScript para registrar un pedido desde la interfaz del mesero
+    const meseroView = document.getElementById('mesero-view');
+    const cocinaView = document.getElementById('cocina-view');
+
+    function registrarPedido(mesa, plato) {
+        // Aquí, registra el pedido y actualiza la vista
+    }
+
+    // Agregar un evento al botón de pedido en la interfaz del mesero
+    const botonPedido = document.getElementById('boton-pedido');
+    botonPedido.addEventListener('click', function() {
+        const mesa = document.getElementById('mesa-select').value;
+        const plato = document.getElementById('plato-select').value;
+        registrarPedido(mesa, plato);
+    });
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Pedidos</title>
+    <script>
+        if (window.innerWidth <= 768) { // Por ejemplo, si el ancho de pantalla es menor o igual a 768px, asumimos un dispositivo móvil
+            //window.location.href = 'mesero.php'; // Redirigir a la vista de mesero
+            window.location.href = 'mesero.html'; // Redirigir a la vista de mesero
+        } else {
+            window.location.href = 'php/vista_meseros.html'; // Redirigir a la vista de mesero
+            //window.location.href = 'php/vista_meseros.php'; // Redirigir a la vista de mesero
+            //window.location.href = 'mesero.html'; // Redirigir a la vista de mesero
+            //window.location.href = 'mesero.php'; // Redirigir a la vista de mesero
+            // window.location.href = 'cocinero.php'; // Redirigir a la vista de cocinero
+        }
+    </script>
+
+</head>
+<body>
+    <div id="mesero-view">
+        <!-- Aquí mostrarás los pedidos para el mesero -->
+    </div>
+    <div id="cocina-view">
+        <!-- Aquí mostrarás los pedidos para los cocineros -->
+    </div>
+</body>
+</html>
+

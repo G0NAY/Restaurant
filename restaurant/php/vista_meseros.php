@@ -19,6 +19,7 @@
             <?php for ($i = 1; $i <= 5; $i++) { ?>
                 <div class="mesa" id="mesa<?php echo $i; ?>" onclick="mostrarPedidos(<?php echo $i; ?>)">
                     <div class="circulo"><?php echo $i; ?></div>
+                    <h4>Mesa <?php echo $i; ?></h5>
                     <div class="contador-tiempo" id="contador-mesa<?php echo $i; ?>">Tiempo: 0s</div>
                     <button class="iniciar-contador" onclick="iniciarContador(<?php echo $i; ?>)">Iniciar Contador</button>
                     <button class="detener-contador" onclick="detenerContador(<?php echo $i; ?>)">Detener Contador</button>
